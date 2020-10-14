@@ -1,8 +1,8 @@
 # Taqnyat PHP
 
-[![Packagist](https://img.shields.io/badge/packagist-v1.0.0-blue)](https://packagist.org/packages/taqnyat/Python)
+[![Packagist](https://img.shields.io/badge/Python-v1.0.0-blue)](https://packagist.org/packages/taqnyat/Python)
 [![Packagist](https://img.shields.io/badge/Download-12.4KB-Green)](https://packagist.org/packages/taqnyat/Python)
-
+[![Packagist](https://img.shields.io/badge/repl-White)](https://repl.it/github/taqnyat/python)
 
 ## Documentation
 
@@ -38,7 +38,7 @@ pip install taqnyat/python
 import Client from TaqnyatSms
 
 bearer = '**************************0adc2b'
-taqnyt = new Client(bearer)
+taqnyt = client(bearer)
 status = taqnyt.sendStatus();
 
 print status;
@@ -51,7 +51,7 @@ print status;
 import Client from TaqnyatSms
 
 bearer = '**************************0adc2b'
-taqnyt = new Client(bearer)
+ttaqnyt = client(bearer)
 balance = taqnyt.balance();
 
 print balance;
@@ -64,7 +64,7 @@ print balance;
 import Client from TaqnyatSms
 
 bearer = '**************************0adc2b'
-taqnyt = new Client(bearer)
+taqnyt = client(bearer)
 senders = taqnyt.senders();
 
 print senders;
@@ -79,12 +79,13 @@ print senders;
 import Client from TaqnyatSms
 
 bearer = '**************************0adc2b'
+
 body = 'message Content';
 recipients = ['966********'];
 sender = 'Sender Name';
 scheduled=''
 
-taqnyt = new Client(bearer)
+taqnyt = client(bearer)
 message = taqnyt.sendMsg(body, recipients, sender,scheduled);
 
 print message;
@@ -105,7 +106,7 @@ recipients = ['966********'];
 sender = 'Sender Name';
 scheduled='dd/mm/yyyy hh:mm:ss'
 
-taqnyt = new Client(bearer)
+taqnyt = client(bearer)
 message = taqnyt.sendMsg(body, recipients, sender,scheduled);
 
 print message;
@@ -122,4 +123,4 @@ If you've instead found a bug in the library or would like new features added, g
 [apidocs]: http://taqnyat.sa/documentation
 [libdocs]: https://github.com/taqnyat/php/blob/master/README.md
 
-[![Run on Repl.it](https://repl.it/badge/github/taqnyat/python)](https://repl.it/github/taqnyat/python)
+[![Run on Repl.it](https://repl.it/badge/github/taqnyat/python)]
