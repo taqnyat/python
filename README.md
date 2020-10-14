@@ -121,3 +121,5 @@ If you've instead found a bug in the library or would like new features added, g
 
 [apidocs]: http://taqnyat.sa/documentation
 [libdocs]: https://github.com/taqnyat/php/blob/master/README.md
+
+[![Run on Repl.it](https://repl.it/badge/github/taqnyat/python)](https://repl.it/github/taqnyat/python)
