@@ -7,8 +7,6 @@
 
 The documentation for Taqnyat API can be found [here][apidocs].
 
-The PHP library documentation can be found [here][libdocs].
-
 ## Versions
 
 `Taqnyat` this is a beta version of Taqnyat to support the Python technology , and we will continue adding more features to support the Python community.
