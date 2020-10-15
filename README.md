@@ -1,8 +1,7 @@
-# Taqnyat PHP
+# Taqnyat Python
 
-[![Packagist](https://img.shields.io/badge/Python-v1.0.0-blue)](https://packagist.org/packages/taqnyat/Python)
-[![Packagist](https://img.shields.io/badge/Download-12.4KB-Green)](https://packagist.org/packages/taqnyat/Python)
-[![Packagist](https://img.shields.io/badge/repl-White)](https://repl.it/github/taqnyat/python)
+[![Packagist](https://img.shields.io/badge/Python-v1.0.0-blue)](https://pypi.org/project/Taqnyat/)
+[![Packagist](https://img.shields.io/badge/Download-12.4KB-Green)](https://pypi.org/project/Taqnyat/)
 
 ## Documentation
 
@@ -24,10 +23,11 @@ You can install **Taqnyat-Python** via pip CLI or by downloading the source.
 ### Via PIP CLI:
 
 **Taqnyat-Python** is available on Packagist as the
-[`taqnyat/python`](https://packagist.org/packages/taqnyat/php) package:
+[taqnyat]([![Packagist](https://img.shields.io/badge/repl-White)](https://pypi.org/project/Taqnyat/)
+) package:
 
 ```
-pip install taqnyat/python
+pip install taqnyat
 ```
 
 ## Quickstart
@@ -121,6 +121,6 @@ If you need help installing or using the library, please send us email to [Taqny
 If you've instead found a bug in the library or would like new features added, go ahead and send us email , we are welcoming to any suggestion any time
 
 [apidocs]: http://taqnyat.sa/documentation
-[libdocs]: https://github.com/taqnyat/php/blob/master/README.md
+[libdocs]: https://github.com/taqnyat/python/README.md
 
 [![Run on Repl.it](https://repl.it/badge/github/taqnyat/python)]
