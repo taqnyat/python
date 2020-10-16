@@ -81,7 +81,7 @@ bearer = '**************************0adc2b'
 body = 'message Content';
 recipients = ['966********'];
 sender = 'Sender Name';
-scheduled=''
+scheduledDatetime=''
 
 taqnyt = client(bearer)
 message = taqnyt.sendMsg(body, recipients, sender,scheduled);
@@ -102,7 +102,7 @@ bearer = '**************************0adc2b'
 body = 'message Content';
 recipients = ['966********'];
 sender = 'Sender Name';
-scheduled='dd/mm/yyyy hh:mm:ss'
+scheduledDatetime='2020-09-30T14:26'
 
 taqnyt = client(bearer)
 message = taqnyt.sendMsg(body, recipients, sender,scheduled);
