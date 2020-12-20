@@ -82,9 +82,10 @@ body = 'message Content';
 recipients = ['966********'];
 sender = 'Sender Name';
 scheduled=''
+deleteId =''
 
 taqnyt = client(bearer)
-message = taqnyt.sendMsg(body, recipients, sender,scheduled);
+message = taqnyt.sendMsg(body, recipients, sender,deleteId,scheduled);
 
 print message;
 
@@ -103,9 +104,10 @@ body = 'message Content';
 recipients = ['966********'];
 sender = 'Sender Name';
 scheduled='2020-09-30T14:26'
+deleteId=100
 
 taqnyt = client(bearer)
-message = taqnyt.sendMsg(body, recipients, sender,scheduled);
+message = taqnyt.sendMsg(body, recipients, sender,deleteId,scheduled);
 
 print message;
 
