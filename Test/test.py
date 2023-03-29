@@ -1,8 +1,3 @@
-from TaqnyatSms import *
+# from TaqnyatSms import Client
 
-
-bearer = '**************************0adc2b'
-taqnyt = client(bearer)
-status = taqnyt.sendStatus();
- 
-print(status);
+# baere = 
