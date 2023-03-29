@@ -33,39 +33,39 @@ pip install taqnyat
 ### Get Services status
 
 ```Python
-import Client from TaqnyatSms
+from TaqnyatSms import client
 
 bearer = '**************************0adc2b'
 taqnyt = client(bearer)
-status = taqnyt.sendStatus();
+status = taqnyt.sendStatus()
 
-print status;
+print(status)
 
 ```
 
 ### Get the account balance and status
 
 ```Python
-import Client from TaqnyatSms
+from TaqnyatSms import client
 
 bearer = '**************************0adc2b'
 ttaqnyt = client(bearer)
-balance = taqnyt.balance();
+balance = taqnyt.balance()
 
-print balance;
+print(balance)
 
 ```
 
 ### Get the account senders
 
 ```Python
-import Client from TaqnyatSms
+from TaqnyatSms import client
 
 bearer = '**************************0adc2b'
 taqnyt = client(bearer)
-senders = taqnyt.senders();
+senders = taqnyt.senders()
 
-print senders;
+print(senders)
 
 ```
 
@@ -74,20 +74,20 @@ print senders;
 ```Python
 # Sending a SMS using Taqnyat API and Python is easy as the following:
 
-import Client from TaqnyatSms
+from TaqnyatSms import client
 
 bearer = '**************************0adc2b'
 
-body = 'message Content';
-recipients = ['966********'];
-sender = 'Sender Name';
+body = 'message Content'
+recipients = ['966********']
+sender = 'Sender Name'
 scheduled=''
 deleteId =''
 
 taqnyt = client(bearer)
-message = taqnyt.sendMsg(body, recipients, sender,deleteId,scheduled);
+message = taqnyt.sendMsg(body, recipients, sender,deleteId,scheduled)
 
-print message;
+print(message)
 
 ```
 
@@ -97,19 +97,19 @@ print message;
 ```Python
 # Sending a SMS using Taqnyat API and Python is easy as the following:
 
-import Client from TaqnyatSms
+from TaqnyatSms import client
 
 bearer = '**************************0adc2b'
-body = 'message Content';
-recipients = ['966********'];
-sender = 'Sender Name';
+body = 'message Content'
+recipients = ['966********']
+sender = 'Sender Name'
 scheduled='2020-09-30T14:26'
 deleteId=100
 
 taqnyt = client(bearer)
-message = taqnyt.sendMsg(body, recipients, sender,deleteId,scheduled);
+message = taqnyt.sendMsg(body, recipients, sender,deleteId,scheduled)
 
-print message;
+print(message)
 
 ```
 
