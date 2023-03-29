@@ -34,7 +34,7 @@ pip install taqnyat
 First, you need to import the `Client` class from the `taqnyat` package:
 
 ```python
-from TaqnyatSms import Client
+from taqnyat import Client
 
 #Then, create a Client object by providing your API key:
 client = Client(api_key='YOUR_API_KEY')
@@ -44,7 +44,7 @@ client = Client(api_key='YOUR_API_KEY')
 ### Error Handling
 If an HTTP request fails, the client will raise an exception by default. To disable this behavior and get the error response as a JSON object, set the raise_exception parameter to False when initializing the client:
 ```python
-from TaqnyatSms import Client
+from taqnyat import Client
 
 #Then, create a Client object by providing your API key:
 client = Client(api_key='YOUR_API_KEY', raise_exception=False)
