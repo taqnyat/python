@@ -121,4 +121,5 @@ If you've instead found a bug in the library or would like new features added, g
 [apidocs]: http://taqnyat.sa/documentation
 [libdocs]: https://github.com/taqnyat/python/README.md
 
-[![Run on Repl.it](https://repl.it/badge/github/taqnyat/python)]
+## Code Rebuild by Ahmed Elboshi 
+### email : ahmedelboshi2@gmail.com
