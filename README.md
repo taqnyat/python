@@ -29,87 +29,85 @@ pip install taqnyat
 ```
 
 ## Quickstart
+## Usage
 
-### Get Services status
+First, you need to import the `Client` class from the `taqnyat` package:
 
+```python
+from TaqnyatSms import Client
+
+#Then, create a Client object by providing your API key:
+client = Client(api_key='YOUR_API_KEY')
+
+```
+
+### Error Handling
+If an HTTP request fails, the client will raise an exception by default. To disable this behavior and get the error response as a JSON object, set the raise_exception parameter to False when initializing the client:
+```python
+from TaqnyatSms import Client
+
+#Then, create a Client object by providing your API key:
+client = Client(api_key='YOUR_API_KEY', raise_exception=False)
+
+```
+If an HTTP request fails and raise_exception is set to False, you can access the error response as a JSON object by checking the error attribute of the client object:
+
+```python
+if client.error:
+    print(client.error)
+```
+
+### Getting the system status
+#### To get the system status, call the send_status method:
 ```Python
-from TaqnyatSms import client
-
-bearer = '**************************0adc2b'
-taqnyt = client(bearer)
-status = taqnyt.sendStatus()
-
+status = client.send_status()
 print(status)
 
 ```
 
 ### Get the account balance and status
-
+#### To get the account balance and status, call the balance method:
 ```Python
-from TaqnyatSms import client
-
-bearer = '**************************0adc2b'
-ttaqnyt = client(bearer)
-balance = taqnyt.balance()
-
+balance = client.balance()
 print(balance)
 
 ```
 
-### Get the account senders
-
+### Getting the list of senders
+#### To get the list of senders, call the senders method:
 ```Python
-from TaqnyatSms import client
-
-bearer = '**************************0adc2b'
-taqnyt = client(bearer)
-senders = taqnyt.senders()
-
+senders = client.senders()
 print(senders)
 
 ```
 
 ### Send an SMS
-
+#### To send an SMS, use the send_msg() method:
 ```Python
-# Sending a SMS using Taqnyat API and Python is easy as the following:
-
-from TaqnyatSms import client
-
-bearer = '**************************0adc2b'
-
 body = 'message Content'
 recipients = ['966********']
 sender = 'Sender Name'
 scheduled=''
-deleteId =''
-
-taqnyt = client(bearer)
-message = taqnyt.sendMsg(body, recipients, sender,deleteId,scheduled)
-
+delete_id =''
+message = client.send_msg(body, recipients, sender,delete_id,scheduled)
 print(message)
 
 ```
+The send_msg() method takes four arguments:
+    body (str): the message to send
+    recipients (list): a list of phone numbers to send the message to
+    sender (str): the sender ID to show on the recipient's phone
+    scheduled (str): the date and time to send the message (optional)
+    delete_id (int): the ID of a previously sent message to delete (optional)
 
+The send_msg() method returns the JSON object returned by the server.
 
-### Send a schedule SMS
-
+### Delete a Message
+#### To delete a previously sent message, use the delete_msg() method:
 ```Python
-# Sending a SMS using Taqnyat API and Python is easy as the following:
-
-from TaqnyatSms import client
-
-bearer = '**************************0adc2b'
-body = 'message Content'
-recipients = ['966********']
-sender = 'Sender Name'
-scheduled='2020-09-30T14:26'
-deleteId=100
-
-taqnyt = client(bearer)
-message = taqnyt.sendMsg(body, recipients, sender,deleteId,scheduled)
-
-print(message)
+delete_id = 123456789
+response = client.delete_msg(delete_id)
+print(response)
 
 ```
 
