@@ -120,7 +120,7 @@ If you need help installing or using the library, please send us email to [Taqny
 
 If you've instead found a bug in the library or would like new features added, go ahead and send us email , we are welcoming to any suggestion any time
 
-[apidocs]: http://taqnyat.sa/documentation
+[apidocs]: http://dev.taqnyat.sa
 [libdocs]: https://github.com/taqnyat/python/README.md
 
 [![Run on Repl.it](https://repl.it/badge/github/taqnyat/python)]
