@@ -32,85 +32,75 @@ pip install taqnyat
 
 ### Get Services status
 
-```Python
-import Client from TaqnyatSms
+```python
+from TaqnyatSms import Client
 
-bearer = '**************************0adc2b'
-taqnyt = client(bearer)
-status = taqnyt.sendStatus();
+bearer = "**************************0adc2b"
+taqnyt = Client(bearer)
+status = taqnyt.sendStatus()
 
-print status;
-
+print(status)
 ```
 
 ### Get the account balance and status
 
-```Python
-import Client from TaqnyatSms
+```python
+from TaqnyatSms import Client
 
-bearer = '**************************0adc2b'
-ttaqnyt = client(bearer)
-balance = taqnyt.balance();
+bearer = "**************************0adc2b"
+taqnyt = Client(bearer)
+balance = taqnyt.balance()
 
-print balance;
-
+print(balance)
 ```
 
 ### Get the account senders
 
-```Python
-import Client from TaqnyatSms
+```python
+from TaqnyatSms import Client
 
-bearer = '**************************0adc2b'
-taqnyt = client(bearer)
-senders = taqnyt.senders();
+bearer = "**************************0adc2b"
+taqnyt = Client(bearer)
+senders = taqnyt.senders()
 
-print senders;
-
+print(senders)
 ```
 
 ### Send an SMS
 
-```Python
+```python
 # Sending a SMS using Taqnyat API and Python is easy as the following:
 
-import Client from TaqnyatSms
+from TaqnyatSms import Client
 
-bearer = '**************************0adc2b'
+bearer = "**************************0adc2b"
+body = "message Content"
+recipients = ["966********"]
+sender = "Sender Name"
 
-body = 'message Content';
-recipients = ['966********'];
-sender = 'Sender Name';
-scheduled=''
-deleteId =''
+client = Client(bearer)
+message = client.sendMsg(body, recipients, sender)
 
-taqnyt = client(bearer)
-message = taqnyt.sendMsg(body, recipients, sender,deleteId,scheduled);
-
-print message;
-
+print(message)
 ```
 
+### Send a scheduled SMS
 
-### Send a schedule SMS
+```python
+# Sending a scheduled SMS using Taqnyat API and Python is equally simple:
 
-```Python
-# Sending a SMS using Taqnyat API and Python is easy as the following:
+from TaqnyatSms import Client
 
-import Client from TaqnyatSms
+bearer = "**************************0adc2b"
+body = "message Content"
+recipients = ["966********"]
+sender = "Sender Name"
+scheduled = "2020-09-30T14:26"
 
-bearer = '**************************0adc2b'
-body = 'message Content';
-recipients = ['966********'];
-sender = 'Sender Name';
-scheduled='2020-09-30T14:26'
-deleteId=100
+taqnyt = Client(bearer)
+message = taqnyt.sendMsg(body, recipients, sender, scheduled=scheduled)
 
-taqnyt = client(bearer)
-message = taqnyt.sendMsg(body, recipients, sender,deleteId,scheduled);
-
-print message;
-
+print(message)
 ```
 
 
